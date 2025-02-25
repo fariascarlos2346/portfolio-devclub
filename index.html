@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,9 @@
 </head>
 
 <body>
+
+    <div class="particulas"></div>
+
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -26,11 +30,9 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <div>
-            <img src="./img/foto-me.jpg" alt="foto do Carlos">
-            <h1>Carlos Henrique</h1>
-            <p>Desenvolvedor Front End</p>
-        </div>
+        <img src="./img/foto-me.jpg" alt="foto do Carlos" class="foto-perfil">
+        <h1>Carlos Henrique</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
     </main>
 
     <section id="sobre" class="sobre">
@@ -43,41 +45,50 @@
     </section>
 
     <section id="projetos" class="projetos">
-         <h2 class="projeto-titulo">Meus Projetos</h2>
-         <div class="projeto-caixa">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
 
-            <div class="projeto-card">
+            <div class="projetos-card">
                 <img src="./img/buscador-receitas.png" alt="projeto 1" class="projetos-imagem">
-                <h3 class="info-projetos">Buscador de receitas</h3>
-                <p class="paragrafo-projetos">Site para uma alimentação rápida e saudavel</p>
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Buscador de receitas</h3>
+                    <p class="paragrafo-projetos">Site para uma alimentação rápida e saudavel</p>
+                </div>       
             </div>
 
-            <div class="projeto-card">
+            <div class="projetos-card">
                 <img src="./img/clone-devclub.png" alt="projeto 2" class="projetos-imagem">
-                <h3 class="info-projetos">Clone DevClub</h3>
-                <p class="paragrafo-projetos">Site para evoluir na carreira da tecnologia</p>
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Clone DevClub</h3>
+                    <p class="paragrafo-projetos">Site para evoluir na carreira da tecnologia</p>
+                </div>
             </div>
 
-            <div class="projeto-card">
+            <div class="projetos-card">
                 <img src="./img/conversor.PNG" alt="projeto 3" class="projetos-imagem">
-                <h3 class="info-projetos">Conversor de Moedas</h3>
-                <p class="paragrafo-projetos">Site para converte nosso real em varios moedas</p>
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Conversor de Moedas</h3>
+                    <p class="paragrafo-projetos">Site para converte nosso real em varios moedas</p>
+                </div>
             </div>
-         </div>
+        </div>
     </section>
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Contatos</h2>
         <form class="formulario-contato" id="formulario">
-            <div class="nome-form">
+            <div class="grupo-form">
                 <input placeholder="Nome" class="campo-form">
             </div>
             <div class="grupo-form">
-                <textarea class="text-form" placeholder="Digite sua Messagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Messagem"></textarea>
             </div>
+
+            <button type="submit" class="botao-form">Enviar whatsap</button>
         </form>
     </section>
 
 
 </body>
+
 </html>
