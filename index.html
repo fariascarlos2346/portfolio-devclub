@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -53,7 +53,7 @@
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Buscador de receitas</h3>
                     <p class="paragrafo-projetos">Site para uma alimentação rápida e saudavel</p>
-                </div>       
+                </div>
             </div>
 
             <div class="projetos-card">
@@ -75,18 +75,38 @@
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="formulario-contato" id="formulario">
+        <h2 class="contatos-titulo">Entre em Contatos</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Messagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
             </div>
 
             <button type="submit" class="botao-form">Enviar whatsap</button>
         </form>
     </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5583998134666';
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+
+    </script>
 
 
 </body>
